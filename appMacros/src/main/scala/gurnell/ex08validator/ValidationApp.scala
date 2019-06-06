@@ -13,7 +13,7 @@ object ValidationApp extends App {
   // This validator will never return any errors, regardless of what
   // data is passed to it.
 
-  // The `field` method creates and returns a new validator with
+  // The `field` method creates and returns a„ new validator with
   // all previous rules plus a new rule, as specified in the second
   // set of arguments:
   //
