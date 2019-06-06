@@ -1,3 +1,5 @@
+package gurnell.printTree
+
 import scala.util.parsing.combinator._
 
 object PrettyPrint extends JavaTokenParsers {
@@ -50,7 +52,7 @@ object PrettyPrint extends JavaTokenParsers {
         Literal(term.toString)
     }
 
-  def prettify(in: String) =
+  def prettify(in: String): String =
     parseAll(node, in) match {
       case Success(node, _)  => node.prettyPrint(0)
       case NoSuccess(msg, _) => in

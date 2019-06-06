@@ -1,16 +1,15 @@
-import java.util.Date
+package gurnell.printTree
 
 import scala.language.experimental.macros
-import scala.reflect.macros.blackbox.Context
-import scala.util.matching._
+import scala.reflect.macros.blackbox
 
 object PrintTree {
   def printTree(title: String)(expr: Any): Unit =
     macro printTreeMacro
 
-  def printTreeMacro(c: Context)(title: c.Tree)(expr: c.Tree) = {
-    import c.universe._
+  def printTreeMacro(c: blackbox.Context)(title: c.Tree)(expr: c.Tree): c.Tree = {
     import PrettyPrint._
+    import c.universe._
 
     // `showCode` and `showRaw` are useful methods from the macro API
     // that convert Trees to Strings:
