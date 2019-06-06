@@ -1,4 +1,4 @@
-package gurnell.printTree
+package gurnell.printtree
 
 object PrintTreeApp extends App {
   import PrintTree._

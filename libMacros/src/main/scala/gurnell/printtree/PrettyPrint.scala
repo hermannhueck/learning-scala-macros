@@ -1,4 +1,4 @@
-package gurnell.printTree
+package gurnell.printtree
 
 import scala.util.parsing.combinator._
 

@@ -1,4 +1,4 @@
-package gurnell.printTree
+package gurnell.printtree
 
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox
