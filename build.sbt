@@ -33,15 +33,6 @@ inThisBuild(
       //"-Xlint",                 // enable handy linter warnings
       //"-Xfatal-warnings",       // turn compiler warnings into errors
     ),
-
-    libraryDependencies ++= Seq(
-      "org.scala-lang" % "scala-reflect" % scalaVersion.value,
-      // "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2",
-    ),
-
-    initialCommands := s"""
-        println
-        """.stripMargin // initialize REPL
   )
 )
 
@@ -62,5 +53,9 @@ lazy val libMacros = (project in file("libMacros"))
   .settings(
     name := "libMacros",
     description := "macro definitions",
+    libraryDependencies ++= Seq(
+      "org.scala-lang" % "scala-reflect" % scalaVersion.value,
+      "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2",
+    ),
   )
 
