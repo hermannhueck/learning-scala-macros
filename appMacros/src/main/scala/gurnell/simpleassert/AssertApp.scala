@@ -1,5 +1,8 @@
+package gurnell.simpleassert
+
 object AssertApp extends App {
-  import AssertMacros.assert
+
+  println
 
   val a = 1
   val b = 2
@@ -10,6 +13,7 @@ object AssertApp extends App {
 
   try {
     assert(a == a)
+    println("1. assertion successful")
   } catch {
     case exn: AssertionError =>
       println("1. " + exn.getMessage)
@@ -17,6 +21,7 @@ object AssertApp extends App {
 
   try {
     assert(a.toString == b.toString)
+    println("2. assertion successful")
   } catch {
     case exn: AssertionError =>
       println("2. " + exn.getMessage)
@@ -24,6 +29,7 @@ object AssertApp extends App {
 
   try {
     assert(true)
+    println("3. assertion successful")
   } catch {
     case exn: AssertionError =>
       println("3. " + exn.getMessage)
@@ -31,8 +37,11 @@ object AssertApp extends App {
 
   try {
     assert(false)
+    println("4. assertion successful")
   } catch {
     case exn: AssertionError =>
       println("4. " + exn.getMessage)
   }
+
+  println
 }

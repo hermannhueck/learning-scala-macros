@@ -1,5 +1,7 @@
+package simpleassert
+
 import scala.language.experimental.macros
-import scala.reflect.macros.blackbox.Context
+import scala.reflect.macros.blackbox
 
 object AssertMacros {
   // This version of `assert` takes a single expression of type `Boolean`,
@@ -11,7 +13,7 @@ object AssertMacros {
   def assert(expr: Boolean): Unit =
     macro assertMacro
 
-  def assertMacro(c: Context)(expr: c.Tree) = {
+  def assertMacro(c: blackbox.Context)(expr: c.Tree): c.Tree = {
     import c.universe._
 
     expr match {
