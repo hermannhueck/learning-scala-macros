@@ -1,5 +1,3 @@
-import Dependencies._
-import sbt.url
 
 val projectName = "learning-scala-macros"
 val githubId = "hermannhueck"
