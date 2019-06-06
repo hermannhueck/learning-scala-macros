@@ -8,7 +8,7 @@ class CsvMacros(val c: blackbox.Context) {
   import c.universe._
 
   def csvFormatMacro[A: c.WeakTypeTag]: c.Tree = {
-    
+
     val tpe = c.weakTypeOf[A]
 
     val subseqs = tpe.decls collect {

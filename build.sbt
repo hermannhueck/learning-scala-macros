@@ -54,6 +54,7 @@ lazy val libMacros = (project in file("libMacros"))
     libraryDependencies ++= Seq(
       "org.scala-lang" % "scala-reflect" % scalaVersion.value withSources() withJavadoc(),
       "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2" withSources() withJavadoc(),
+      "org.specs2" %% "specs2-core" % "4.5.1" % "test"
     ),
   )
 
