@@ -1,4 +1,4 @@
-package gurnell.hello
+package gurnell.ex01hello
 
 object HelloMacros extends App {
 

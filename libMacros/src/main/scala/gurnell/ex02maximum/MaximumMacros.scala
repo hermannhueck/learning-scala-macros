@@ -1,4 +1,4 @@
-package gurnell.maximum
+package gurnell.ex02maximum
 
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox.Context

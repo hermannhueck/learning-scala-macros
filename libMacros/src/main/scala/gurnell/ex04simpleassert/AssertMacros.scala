@@ -1,4 +1,4 @@
-package simpleassert
+package gurnell.ex04simpleassert
 
 import scala.language.experimental.macros
 import scala.reflect.macros.blackbox

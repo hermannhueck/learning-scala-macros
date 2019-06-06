@@ -1,4 +1,4 @@
-package gurnell.simpleassert
+package gurnell.ex04simpleassert
 
 object AssertApp extends App {
 

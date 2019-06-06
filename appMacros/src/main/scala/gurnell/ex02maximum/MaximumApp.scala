@@ -1,4 +1,4 @@
-package gurnell.maximum
+package gurnell.ex02maximum
 
 object MaximumApp extends App {
 
