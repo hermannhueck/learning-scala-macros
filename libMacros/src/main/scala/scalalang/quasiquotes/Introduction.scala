@@ -1,10 +1,12 @@
 package scalalang.quasiquotes
 
-import scalalang.quasiquotes.Quasiquotes.universe
-
 import scala.reflect.runtime
 
-object Quasiquotes extends App {
+/*
+  Introduction to Quasiquotes
+  https://docs.scala-lang.org/overviews/quasiquotes/intro.html
+ */
+object Introduction extends App {
 
   println
 
