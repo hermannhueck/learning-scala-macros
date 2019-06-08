@@ -1,6 +1,6 @@
 # Learning Scala Macros
 
-This repo contains the code I copied or produced while learning Scala Macros
+This repo contains the code I copied/modified/produced while learning Scala Macros
 
 ## Resources
 
