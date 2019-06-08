@@ -1,8 +1,8 @@
 # Learning Scala Macros
 
-This repo contains the code I copied or produced while learning Scala Macros
+This repo contains the code I copied/modified/produced while learning Scala Macros
 
-## Resources
+## References
 
 - Dave Gurnell, underscore.io: Essential Macros Code Examples<br/>
   https://github.com/underscoreio/essential-macros
@@ -17,7 +17,7 @@ This repo contains the code I copied or produced while learning Scala Macros
 - All about Scala Macros on one site<br/>
   http://scalamacros.org/index.html
   
-## Videos
+## Talks
 
 - Dave Gurnell's Talk: *Macros for the rest of us* at Scala Days 2014<br/>
   https://www.youtube.com/watch?v=ZVYdiAudr-I

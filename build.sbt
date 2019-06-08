@@ -8,7 +8,7 @@ inThisBuild(
   Seq(
     organization := "io.hueck",
     organizationName := "Hueck",
-    description := "This repo contains the code I copied or produced while learning Scala Macros",
+    description := "This repo contains the code I copied/modified/produced while learning Scala Macros",
     homepage := Some(url(projectUrl)),
     startYear := Some(2019),
     licenses := Vector(("MIT", url("https://opensource.org/licenses/MIT"))),
