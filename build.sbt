@@ -19,7 +19,7 @@ inThisBuild(
 
     version := "0.1.0",
 
-    scalaVersion := "2.13.0-RC3",
+    scalaVersion := "2.13.0",
 
     scalacOptions ++= Seq(
       "-encoding", "UTF-8", // source files are in UTF-8
@@ -55,7 +55,7 @@ lazy val libMacros = (project in file("libMacros"))
       "org.scala-lang" % "scala-reflect" % scalaVersion.value withSources() withJavadoc(),
       "org.scala-lang" % "scala-compiler" % scalaVersion.value withSources() withJavadoc(),
       "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2" withSources() withJavadoc(),
-      "org.specs2" %% "specs2-core" % "4.5.1" % "test"
+      "org.specs2" %% "specs2-core" % "4.7.0" % "test"
     ),
   )
 
