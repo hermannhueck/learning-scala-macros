@@ -6,7 +6,7 @@ object TestPrintf extends App {
 
   import Macros._
 
-  println
+  println("─" * 50)
   printf("hello %s!\n", "world")
-  println
+  println("─" * 50)
 }
