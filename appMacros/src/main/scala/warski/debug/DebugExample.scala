@@ -1,90 +1,99 @@
 package warski.debug
 
+/*
+  http://www.warski.org/blog/2012/12/starting-with-scala-macros-a-short-tutorial/
+  https://github.com/adamw/scala-macro-debug
+ */
 object DebugExample extends App {
 
   def tutorialExamples(): Unit = {
 
-	  import DebugMacros._
-	
-	  h1("Tutorial Examples")
+    import DebugMacros._
 
-	  h2("Hello World macro")
-	  hello()
-	
-	  h2("Printparam macro")
-	  val x = 12
-	  printparam(x)
-	  printparam(x*2)
-	  printparam(f(x))
-	
-	  h2("Debug 1 macro")
-	  val y = 10
-	  debug1(y)
-	  debug1(y*2)
-	  debug1(f(y))
-	
-	  def test(): Unit = {
-	    val p = 11
-	    debug1(p)
-	    debug1(p + y)
-	  }
-	
-	  test()
-	
-	  h2("Debug macro")
-	  val a = 10
-	
-	  def test2(): Unit = {
-	    val b = 20
-	    val c = 30
-	    debug(b, c)
-	    debug("Got as far as here", a, b , c)
-	    debug("Adding", a+b, "should be", c)
-	  }
-	
-	  test2()
+    h1("Tutorial Examples")
+
+    h2("Hello World macro")
+    hello()
+
+    h2("Printparam macro")
+    val x = 12
+    printparam(x)
+    printparam(x * 2)
+    printparam(f(x))
+
+    h2("Debug 1 macro")
+    val y = 10
+    debug1(y)
+    debug1(y * 2)
+    debug1(f(y))
+
+    def test(): Unit = {
+      val p = 11
+      debug1(p)
+      debug1(p + y)
+    }
+
+    test()
+
+    h2("Debug macro")
+    val a = 10
+
+    def test2(): Unit = {
+      val b = 20
+      val c = 30
+      debug(b, c)
+      debug("Got as far as here", a, b, c)
+      debug("Adding", a + b, "should be", c)
+    }
+
+    test2()
   }
 
-	def debugConsoleExamples(): Unit = {
+  def debugConsoleExamples(): Unit = {
 
-		import DebugConsole._
+    import DebugConsole._
 
-		h1("Debug Console Examples")
-		h2("Debug macro")
-		val a = 10
+    h1("Debug Console Examples")
+    h2("Debug macro")
+    val a = 10
 
-		def test2(): Unit = {
-			val b = 20
-			val c = 30
-			debug(b, c)
-			debug("Got as far as here", a, b , c)
-			debug("Adding", a+b, "should be", c)
-		}
+    def test2(): Unit = {
+      val b = 20
+      val c = 30
+      debug(b, c)
+      debug("Got as far as here", a, b, c)
+      debug("Adding", a + b, "should be", c)
+    }
 
-		test2()
+    test2()
 
-		h2("DebugReport macro")
-		val i = 12
-		val anotherParameter = "Something entered"
+    h2("DebugReport macro")
+    val i = 12
+    val anotherParameter = "Something entered"
 
-		println("\nEmpty")
-		debugReport()
-	
-		println("\nSingle Message")
-		debugReport("It's happening")
-	
-		println("\nSingle Parameter")
-		debugReport(i)
-	
-		println("\nSingle Message + Single Parameter")
-		debugReport("Here is the output", i)
-	
-		println("\nMultiple Parameters")
-		debugReport(i, Math.pow(123.45, 2) * 2, anotherParameter)
-	
-		println("\nMessage + Multiple Parameters")
-		debugReport("And here they are valued?", i, Math.pow(123.45 , 2) * 2, anotherParameter)
-	}
+    println("\nEmpty")
+    debugReport()
+
+    println("\nSingle Message")
+    debugReport("It's happening")
+
+    println("\nSingle Parameter")
+    debugReport(i)
+
+    println("\nSingle Message + Single Parameter")
+    debugReport("Here is the output", i)
+
+    println("\nMultiple Parameters")
+    debugReport(i, Math.pow(123.45, 2) * 2, anotherParameter)
+
+    println("\nMessage + Multiple Parameters")
+    debugReport(
+      "And here they are valued?",
+      i,
+      Math.pow(123.45, 2) * 2,
+      anotherParameter
+    )
+  }
 
   tutorialExamples()
   debugConsoleExamples()
