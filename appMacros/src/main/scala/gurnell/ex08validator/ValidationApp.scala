@@ -2,6 +2,8 @@ package gurnell.ex08validator
 
 object ValidationApp extends App {
 
+  println("─" * 80)
+
   // Data types:
 
   case class Person(name: String, age: Int, address: Address)
@@ -53,4 +55,6 @@ object ValidationApp extends App {
   println("2. " + (personValidator(badAge)     mkString "\n   "))
   println("3. " + (personValidator(badAddress) mkString "\n   "))
   println("4. " + (personValidator(badAll)     mkString "\n   "))
+
+  println("─" * 80)
 }

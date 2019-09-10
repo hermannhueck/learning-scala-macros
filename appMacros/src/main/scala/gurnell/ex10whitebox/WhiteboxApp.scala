@@ -3,6 +3,8 @@ package gurnell.ex10whitebox
 object WhiteboxApp extends App {
   import WhiteboxMacros._
 
+  println("─" * 80)
+
   // Each macro here is defined with a return type of `Option[Int]`.
   // Each macro actually expands to an expression of type `Some[Int]`.
 
@@ -23,4 +25,6 @@ object WhiteboxApp extends App {
 
   println("It compiles!")
   println("See the source code for an explanation!")
+
+  println("─" * 80)
 }

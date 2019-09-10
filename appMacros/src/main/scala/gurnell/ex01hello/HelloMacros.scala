@@ -2,7 +2,7 @@ package gurnell.ex01hello
 
 object HelloMacros extends App {
 
-  println("\n==========")
+  println("─" * 80)
 
   import LibraryMacros._
 
@@ -12,7 +12,7 @@ object HelloMacros extends App {
   // In other words, it prints the time at the point of compilation:
   println(greeting)
 
-  // Contrast this with HelloMacros.scala that executes at run time.
+  // Contrast this with HelloWorld.scala that executes at run time.
 
-  println("==========\n")
+  println("─" * 80)
 }

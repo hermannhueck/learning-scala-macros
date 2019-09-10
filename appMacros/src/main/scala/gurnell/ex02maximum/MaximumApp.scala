@@ -2,7 +2,7 @@ package gurnell.ex02maximum
 
 object MaximumApp extends App {
 
-  println("\n==========")
+  println("─" * 80)
 
   import MaximumMacros._
 
@@ -40,5 +40,5 @@ object MaximumApp extends App {
   // betterMaximum(10, 20)
   // println(temp1)
 
-  println("==========\n")
+  println("─" * 80)
 }

@@ -1,7 +1,10 @@
 package gurnell.ex06orderings
 
 object OrderingsApp extends App {
+
   import OrderingsMacros._
+
+  println("─" * 80)
 
   case class Person(
     name: String,
@@ -32,4 +35,6 @@ object OrderingsApp extends App {
   println("2b. " + people.sorted(by("age", false)))
   println("3a. " + people.sorted(by("whatever")))
   println("3b. " + people.sorted(by("whatever", false)))
+
+  println("─" * 80)
 }

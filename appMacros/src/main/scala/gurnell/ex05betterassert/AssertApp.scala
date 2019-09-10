@@ -1,7 +1,10 @@
 package gurnell.ex05betterassert
 
 object AssertApp extends App {
+
   import AssertMacros.assert
+
+  println("─" * 80)
 
   // This improved version of the macro in the `simpleassert` project
   // prints informative error messages for a variety of basic Scala
@@ -61,5 +64,5 @@ object AssertApp extends App {
     case exn: Throwable => println(exn)
   }
 
-
+  println("─" * 80)
 }

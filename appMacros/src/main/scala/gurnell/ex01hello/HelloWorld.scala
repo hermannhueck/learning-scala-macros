@@ -2,7 +2,7 @@ package gurnell.ex01hello
 
 object HelloWorld extends App {
 
-  println("\n==========")
+  println("─" * 80)
 
   import LibraryMethods._
 
@@ -14,5 +14,5 @@ object HelloWorld extends App {
 
   // Contrast this with HelloMacros.scala that executes at compile time.
 
-  println("==========\n")
+  println("─" * 80)
 }

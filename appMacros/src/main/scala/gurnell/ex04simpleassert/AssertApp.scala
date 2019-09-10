@@ -2,7 +2,9 @@ package gurnell.ex04simpleassert
 
 object AssertApp extends App {
 
-  println
+  import AssertMacros._
+
+  println("─" * 80)
 
   val a = 1
   val b = 2
@@ -43,5 +45,5 @@ object AssertApp extends App {
       println("4. " + exn.getMessage)
   }
 
-  println
+  println("─" * 80)
 }
