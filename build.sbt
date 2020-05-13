@@ -1,33 +1,34 @@
 val projectName = "learning-scala-macros"
 
-inThisBuild(Seq(
-
-  version := "0.1.0",
-  scalaVersion := "2.13.0",
-
-  scalacOptions ++= Seq(
-    "-encoding", "UTF-8", // source files are in UTF-8
-    "-deprecation", // warn about use of deprecated APIs
-    "-unchecked", // warn about unchecked type parameters
-    "-feature", // warn about misused language features
-    //"-language:higherKinds",  // suppress warnings when using higher kinded types
-    //"-Ypartial-unification",  // (removed in scala 2.13) allow the compiler to unify type constructors of different arities
-    //"-Xlint",                 // enable handy linter warnings
-    //"-Xfatal-warnings",       // turn compiler warnings into errors
-  ),
-))
+inThisBuild(
+  Seq(
+    version := "0.1.0",
+    scalaVersion := "2.13.2",
+    scalacOptions ++= Seq(
+      "-encoding",
+      "UTF-8", // source files are in UTF-8
+      "-deprecation", // warn about use of deprecated APIs
+      "-unchecked", // warn about unchecked type parameters
+      "-feature" // warn about misused language features
+      //"-language:higherKinds",  // suppress warnings when using higher kinded types
+      //"-Ypartial-unification",  // (removed in scala 2.13) allow the compiler to unify type constructors of different arities
+      //"-Xlint",                 // enable handy linter warnings
+      //"-Xfatal-warnings",       // turn compiler warnings into errors
+    )
+  )
+)
 
 lazy val root = (project in file("."))
   .aggregate(appMacros, libMacros)
   .settings(
-    name := projectName,
+    name := projectName
   )
 
 lazy val appMacros = (project in file("appMacros"))
   .dependsOn(libMacros)
   .settings(
     name := "appMacros",
-    description := "macro applications",
+    description := "macro applications"
   )
 
 lazy val libMacros = (project in file("libMacros"))
@@ -35,9 +36,9 @@ lazy val libMacros = (project in file("libMacros"))
     name := "libMacros",
     description := "macro definitions",
     libraryDependencies ++= Seq(
-      "org.scala-lang" % "scala-reflect" % scalaVersion.value withSources() withJavadoc(),
-      "org.scala-lang" % "scala-compiler" % scalaVersion.value withSources() withJavadoc(),
-      "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2" withSources() withJavadoc(),
+      "org.scala-lang" % "scala-reflect" % scalaVersion.value withSources () withJavadoc (),
+      "org.scala-lang" % "scala-compiler" % scalaVersion.value withSources () withJavadoc (),
+      "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2" withSources () withJavadoc (),
       "org.specs2" %% "specs2-core" % "4.7.0" % "test"
-    ),
+    )
   )
