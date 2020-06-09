@@ -1,5 +1,6 @@
 package gurnell.ex03printtree
 
+@annotation.nowarn("cat=other-pure-statement")
 object PrintTreeApp extends App {
   import PrintTree._
 
@@ -44,7 +45,7 @@ object PrintTreeApp extends App {
 
   println("─" * 80)
   printTree("Multiple expressions in a block") {
-    123 ; 234
+    123; 234
   }
 
   println("─" * 80)
@@ -64,7 +65,7 @@ object PrintTreeApp extends App {
     val a = 1
     val b = 2
 
-    if(a > b) a else b
+    if (a > b) a else b
   }
 
   println("─" * 80)
